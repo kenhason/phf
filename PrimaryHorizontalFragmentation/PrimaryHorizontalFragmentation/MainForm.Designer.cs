@@ -33,15 +33,15 @@
             this.comboBox_SelectTables = new System.Windows.Forms.ComboBox();
             this.button_Run = new System.Windows.Forms.Button();
             this.groupBox_AttributeInput = new System.Windows.Forms.GroupBox();
-            this.label_AttributeName = new System.Windows.Forms.Label();
-            this.label_DataType = new System.Windows.Forms.Label();
-            this.label_IsRelevant = new System.Windows.Forms.Label();
-            this.textBox_AttributeName = new System.Windows.Forms.TextBox();
-            this.button_AddAttribute = new System.Windows.Forms.Button();
-            this.comboBox_DataType = new System.Windows.Forms.ComboBox();
-            this.comboBox_IsRelevant = new System.Windows.Forms.ComboBox();
-            this.textBox_AttributeList = new System.Windows.Forms.TextBox();
             this.button_FinishAttributesInput = new System.Windows.Forms.Button();
+            this.textBox_AttributeList = new System.Windows.Forms.TextBox();
+            this.comboBox_IsRelevant = new System.Windows.Forms.ComboBox();
+            this.comboBox_DataType = new System.Windows.Forms.ComboBox();
+            this.button_AddAttribute = new System.Windows.Forms.Button();
+            this.textBox_AttributeName = new System.Windows.Forms.TextBox();
+            this.label_IsRelevant = new System.Windows.Forms.Label();
+            this.label_DataType = new System.Windows.Forms.Label();
+            this.label_AttributeName = new System.Windows.Forms.Label();
             this.groupBox_SimplePredicates = new System.Windows.Forms.GroupBox();
             this.button_FinishSimplePredicateInput = new System.Windows.Forms.Button();
             this.textBox_SimplePredicates = new System.Windows.Forms.TextBox();
@@ -53,6 +53,9 @@
             this.label_Operator = new System.Windows.Forms.Label();
             this.label_Attribute = new System.Windows.Forms.Label();
             this.textBox_AlgorithmResults = new System.Windows.Forms.TextBox();
+            this.textBox_ServerName = new System.Windows.Forms.TextBox();
+            this.label_ServerName = new System.Windows.Forms.Label();
+            this.button_Connect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ExecutionStages)).BeginInit();
             this.groupBox_AttributeInput.SuspendLayout();
             this.groupBox_SimplePredicates.SuspendLayout();
@@ -60,10 +63,10 @@
             // 
             // button_Import
             // 
-            this.button_Import.Location = new System.Drawing.Point(530, 10);
+            this.button_Import.Location = new System.Drawing.Point(598, 265);
             this.button_Import.Name = "button_Import";
             this.button_Import.Size = new System.Drawing.Size(75, 23);
-            this.button_Import.TabIndex = 0;
+            this.button_Import.TabIndex = 13;
             this.button_Import.Text = "IMPORT";
             this.button_Import.UseVisualStyleBackColor = true;
             this.button_Import.Click += new System.EventHandler(this.btnImport_Click);
@@ -71,26 +74,26 @@
             // dataGridView_ExecutionStages
             // 
             this.dataGridView_ExecutionStages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ExecutionStages.Location = new System.Drawing.Point(528, 48);
+            this.dataGridView_ExecutionStages.Location = new System.Drawing.Point(428, 293);
             this.dataGridView_ExecutionStages.Name = "dataGridView_ExecutionStages";
-            this.dataGridView_ExecutionStages.Size = new System.Drawing.Size(396, 460);
+            this.dataGridView_ExecutionStages.Size = new System.Drawing.Size(564, 221);
             this.dataGridView_ExecutionStages.TabIndex = 1;
             // 
             // comboBox_SelectTables
             // 
             this.comboBox_SelectTables.FormattingEnabled = true;
-            this.comboBox_SelectTables.Location = new System.Drawing.Point(701, 12);
+            this.comboBox_SelectTables.Location = new System.Drawing.Point(769, 267);
             this.comboBox_SelectTables.Name = "comboBox_SelectTables";
             this.comboBox_SelectTables.Size = new System.Drawing.Size(223, 21);
-            this.comboBox_SelectTables.TabIndex = 2;
+            this.comboBox_SelectTables.TabIndex = 15;
             this.comboBox_SelectTables.SelectedIndexChanged += new System.EventHandler(this.cbSelectTables_SelectedIndexChanged);
             // 
             // button_Run
             // 
-            this.button_Run.Location = new System.Drawing.Point(620, 10);
+            this.button_Run.Location = new System.Drawing.Point(688, 265);
             this.button_Run.Name = "button_Run";
             this.button_Run.Size = new System.Drawing.Size(75, 23);
-            this.button_Run.TabIndex = 3;
+            this.button_Run.TabIndex = 14;
             this.button_Run.Text = "RUN";
             this.button_Run.UseVisualStyleBackColor = true;
             this.button_Run.Click += new System.EventHandler(this.buttonRun_Click);
@@ -113,65 +116,26 @@
             this.groupBox_AttributeInput.TabStop = false;
             this.groupBox_AttributeInput.Text = "ATTRIBUTE";
             // 
-            // label_AttributeName
+            // button_FinishAttributesInput
             // 
-            this.label_AttributeName.AutoSize = true;
-            this.label_AttributeName.Location = new System.Drawing.Point(16, 30);
-            this.label_AttributeName.Name = "label_AttributeName";
-            this.label_AttributeName.Size = new System.Drawing.Size(38, 13);
-            this.label_AttributeName.TabIndex = 1;
-            this.label_AttributeName.Text = "NAME";
+            this.button_FinishAttributesInput.FlatAppearance.BorderSize = 0;
+            this.button_FinishAttributesInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_FinishAttributesInput.Location = new System.Drawing.Point(403, 160);
+            this.button_FinishAttributesInput.Margin = new System.Windows.Forms.Padding(1);
+            this.button_FinishAttributesInput.Name = "button_FinishAttributesInput";
+            this.button_FinishAttributesInput.Size = new System.Drawing.Size(55, 49);
+            this.button_FinishAttributesInput.TabIndex = 5;
+            this.button_FinishAttributesInput.Text = "DONE";
+            this.button_FinishAttributesInput.UseVisualStyleBackColor = true;
+            this.button_FinishAttributesInput.Click += new System.EventHandler(this.button_FinishAttributesInput_Click);
             // 
-            // label_DataType
+            // textBox_AttributeList
             // 
-            this.label_DataType.AutoSize = true;
-            this.label_DataType.Location = new System.Drawing.Point(164, 30);
-            this.label_DataType.Name = "label_DataType";
-            this.label_DataType.Size = new System.Drawing.Size(67, 13);
-            this.label_DataType.TabIndex = 2;
-            this.label_DataType.Text = "DATA TYPE";
-            // 
-            // label_IsRelevant
-            // 
-            this.label_IsRelevant.AutoSize = true;
-            this.label_IsRelevant.Location = new System.Drawing.Point(280, 29);
-            this.label_IsRelevant.Name = "label_IsRelevant";
-            this.label_IsRelevant.Size = new System.Drawing.Size(83, 13);
-            this.label_IsRelevant.TabIndex = 3;
-            this.label_IsRelevant.Text = "IS RELEVANT?";
-            // 
-            // textBox_AttributeName
-            // 
-            this.textBox_AttributeName.Location = new System.Drawing.Point(15, 50);
-            this.textBox_AttributeName.Name = "textBox_AttributeName";
-            this.textBox_AttributeName.Size = new System.Drawing.Size(138, 20);
-            this.textBox_AttributeName.TabIndex = 5;
-            // 
-            // button_AddAttribute
-            // 
-            this.button_AddAttribute.FlatAppearance.BorderSize = 0;
-            this.button_AddAttribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.button_AddAttribute.Location = new System.Drawing.Point(403, 85);
-            this.button_AddAttribute.Margin = new System.Windows.Forms.Padding(1);
-            this.button_AddAttribute.Name = "button_AddAttribute";
-            this.button_AddAttribute.Size = new System.Drawing.Size(55, 50);
-            this.button_AddAttribute.TabIndex = 6;
-            this.button_AddAttribute.Text = "+";
-            this.button_AddAttribute.UseVisualStyleBackColor = true;
-            this.button_AddAttribute.Click += new System.EventHandler(this.button_AddAttribute_Click);
-            // 
-            // comboBox_DataType
-            // 
-            this.comboBox_DataType.FormattingEnabled = true;
-            this.comboBox_DataType.Items.AddRange(new object[] {
-            "STRING",
-            "INT",
-            "DATETIME",
-            "(other)"});
-            this.comboBox_DataType.Location = new System.Drawing.Point(164, 50);
-            this.comboBox_DataType.Name = "comboBox_DataType";
-            this.comboBox_DataType.Size = new System.Drawing.Size(107, 21);
-            this.comboBox_DataType.TabIndex = 7;
+            this.textBox_AttributeList.Location = new System.Drawing.Point(15, 85);
+            this.textBox_AttributeList.Multiline = true;
+            this.textBox_AttributeList.Name = "textBox_AttributeList";
+            this.textBox_AttributeList.Size = new System.Drawing.Size(358, 124);
+            this.textBox_AttributeList.TabIndex = 9;
             // 
             // comboBox_IsRelevant
             // 
@@ -182,28 +146,67 @@
             this.comboBox_IsRelevant.Location = new System.Drawing.Point(283, 49);
             this.comboBox_IsRelevant.Name = "comboBox_IsRelevant";
             this.comboBox_IsRelevant.Size = new System.Drawing.Size(90, 21);
-            this.comboBox_IsRelevant.TabIndex = 8;
+            this.comboBox_IsRelevant.TabIndex = 3;
             // 
-            // textBox_AttributeList
+            // comboBox_DataType
             // 
-            this.textBox_AttributeList.Location = new System.Drawing.Point(15, 85);
-            this.textBox_AttributeList.Multiline = true;
-            this.textBox_AttributeList.Name = "textBox_AttributeList";
-            this.textBox_AttributeList.Size = new System.Drawing.Size(358, 124);
-            this.textBox_AttributeList.TabIndex = 9;
+            this.comboBox_DataType.FormattingEnabled = true;
+            this.comboBox_DataType.Items.AddRange(new object[] {
+            "string",
+            "int",
+            "datetime",
+            "(other)"});
+            this.comboBox_DataType.Location = new System.Drawing.Point(164, 50);
+            this.comboBox_DataType.Name = "comboBox_DataType";
+            this.comboBox_DataType.Size = new System.Drawing.Size(107, 21);
+            this.comboBox_DataType.TabIndex = 1;
             // 
-            // button_FinishAttributesInput
+            // button_AddAttribute
             // 
-            this.button_FinishAttributesInput.FlatAppearance.BorderSize = 0;
-            this.button_FinishAttributesInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_FinishAttributesInput.Location = new System.Drawing.Point(403, 160);
-            this.button_FinishAttributesInput.Margin = new System.Windows.Forms.Padding(1);
-            this.button_FinishAttributesInput.Name = "button_FinishAttributesInput";
-            this.button_FinishAttributesInput.Size = new System.Drawing.Size(55, 49);
-            this.button_FinishAttributesInput.TabIndex = 10;
-            this.button_FinishAttributesInput.Text = "DONE";
-            this.button_FinishAttributesInput.UseVisualStyleBackColor = true;
-            this.button_FinishAttributesInput.Click += new System.EventHandler(this.button_FinishAttributesInput_Click);
+            this.button_AddAttribute.FlatAppearance.BorderSize = 0;
+            this.button_AddAttribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.button_AddAttribute.Location = new System.Drawing.Point(403, 85);
+            this.button_AddAttribute.Margin = new System.Windows.Forms.Padding(1);
+            this.button_AddAttribute.Name = "button_AddAttribute";
+            this.button_AddAttribute.Size = new System.Drawing.Size(55, 50);
+            this.button_AddAttribute.TabIndex = 4;
+            this.button_AddAttribute.Text = "+";
+            this.button_AddAttribute.UseVisualStyleBackColor = true;
+            this.button_AddAttribute.Click += new System.EventHandler(this.button_AddAttribute_Click);
+            // 
+            // textBox_AttributeName
+            // 
+            this.textBox_AttributeName.Location = new System.Drawing.Point(15, 50);
+            this.textBox_AttributeName.Name = "textBox_AttributeName";
+            this.textBox_AttributeName.Size = new System.Drawing.Size(138, 20);
+            this.textBox_AttributeName.TabIndex = 0;
+            // 
+            // label_IsRelevant
+            // 
+            this.label_IsRelevant.AutoSize = true;
+            this.label_IsRelevant.Location = new System.Drawing.Point(280, 29);
+            this.label_IsRelevant.Name = "label_IsRelevant";
+            this.label_IsRelevant.Size = new System.Drawing.Size(83, 13);
+            this.label_IsRelevant.TabIndex = 3;
+            this.label_IsRelevant.Text = "IS RELEVANT?";
+            // 
+            // label_DataType
+            // 
+            this.label_DataType.AutoSize = true;
+            this.label_DataType.Location = new System.Drawing.Point(164, 30);
+            this.label_DataType.Name = "label_DataType";
+            this.label_DataType.Size = new System.Drawing.Size(67, 13);
+            this.label_DataType.TabIndex = 2;
+            this.label_DataType.Text = "DATA TYPE";
+            // 
+            // label_AttributeName
+            // 
+            this.label_AttributeName.AutoSize = true;
+            this.label_AttributeName.Location = new System.Drawing.Point(16, 30);
+            this.label_AttributeName.Name = "label_AttributeName";
+            this.label_AttributeName.Size = new System.Drawing.Size(38, 13);
+            this.label_AttributeName.TabIndex = 1;
+            this.label_AttributeName.Text = "NAME";
             // 
             // groupBox_SimplePredicates
             // 
@@ -216,7 +219,7 @@
             this.groupBox_SimplePredicates.Controls.Add(this.label_Value);
             this.groupBox_SimplePredicates.Controls.Add(this.label_Operator);
             this.groupBox_SimplePredicates.Controls.Add(this.label_Attribute);
-            this.groupBox_SimplePredicates.Location = new System.Drawing.Point(25, 275);
+            this.groupBox_SimplePredicates.Location = new System.Drawing.Point(518, 25);
             this.groupBox_SimplePredicates.Name = "groupBox_SimplePredicates";
             this.groupBox_SimplePredicates.Size = new System.Drawing.Size(474, 233);
             this.groupBox_SimplePredicates.TabIndex = 11;
@@ -242,7 +245,7 @@
             this.textBox_SimplePredicates.Multiline = true;
             this.textBox_SimplePredicates.Name = "textBox_SimplePredicates";
             this.textBox_SimplePredicates.Size = new System.Drawing.Size(358, 124);
-            this.textBox_SimplePredicates.TabIndex = 9;
+            this.textBox_SimplePredicates.TabIndex = 100;
             // 
             // comboBox_Attributes
             // 
@@ -250,7 +253,7 @@
             this.comboBox_Attributes.Location = new System.Drawing.Point(19, 50);
             this.comboBox_Attributes.Name = "comboBox_Attributes";
             this.comboBox_Attributes.Size = new System.Drawing.Size(134, 21);
-            this.comboBox_Attributes.TabIndex = 8;
+            this.comboBox_Attributes.TabIndex = 6;
             // 
             // comboBox_Operators
             // 
@@ -275,7 +278,7 @@
             this.button_AddSimplePredicate.Margin = new System.Windows.Forms.Padding(1);
             this.button_AddSimplePredicate.Name = "button_AddSimplePredicate";
             this.button_AddSimplePredicate.Size = new System.Drawing.Size(55, 50);
-            this.button_AddSimplePredicate.TabIndex = 6;
+            this.button_AddSimplePredicate.TabIndex = 9;
             this.button_AddSimplePredicate.Text = "+";
             this.button_AddSimplePredicate.UseVisualStyleBackColor = true;
             this.button_AddSimplePredicate.Click += new System.EventHandler(this.button_AddSimplePredicate_Click);
@@ -285,7 +288,7 @@
             this.textBox_Value.Location = new System.Drawing.Point(283, 50);
             this.textBox_Value.Name = "textBox_Value";
             this.textBox_Value.Size = new System.Drawing.Size(90, 20);
-            this.textBox_Value.TabIndex = 5;
+            this.textBox_Value.TabIndex = 8;
             // 
             // label_Value
             // 
@@ -316,17 +319,46 @@
             // 
             // textBox_AlgorithmResults
             // 
-            this.textBox_AlgorithmResults.Location = new System.Drawing.Point(528, 48);
+            this.textBox_AlgorithmResults.Location = new System.Drawing.Point(25, 293);
             this.textBox_AlgorithmResults.Multiline = true;
             this.textBox_AlgorithmResults.Name = "textBox_AlgorithmResults";
-            this.textBox_AlgorithmResults.Size = new System.Drawing.Size(396, 460);
+            this.textBox_AlgorithmResults.Size = new System.Drawing.Size(397, 221);
             this.textBox_AlgorithmResults.TabIndex = 12;
+            // 
+            // textBox_ServerName
+            // 
+            this.textBox_ServerName.Location = new System.Drawing.Point(121, 266);
+            this.textBox_ServerName.Name = "textBox_ServerName";
+            this.textBox_ServerName.Size = new System.Drawing.Size(177, 20);
+            this.textBox_ServerName.TabIndex = 11;
+            // 
+            // label_ServerName
+            // 
+            this.label_ServerName.AutoSize = true;
+            this.label_ServerName.Location = new System.Drawing.Point(30, 270);
+            this.label_ServerName.Name = "label_ServerName";
+            this.label_ServerName.Size = new System.Drawing.Size(85, 13);
+            this.label_ServerName.TabIndex = 14;
+            this.label_ServerName.Text = "SERVER NAME";
+            // 
+            // button_Connect
+            // 
+            this.button_Connect.Location = new System.Drawing.Point(303, 264);
+            this.button_Connect.Name = "button_Connect";
+            this.button_Connect.Size = new System.Drawing.Size(119, 23);
+            this.button_Connect.TabIndex = 12;
+            this.button_Connect.Text = "CONNECT";
+            this.button_Connect.UseVisualStyleBackColor = true;
+            this.button_Connect.Click += new System.EventHandler(this.button_Connect_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 526);
+            this.ClientSize = new System.Drawing.Size(1019, 526);
+            this.Controls.Add(this.button_Connect);
+            this.Controls.Add(this.label_ServerName);
+            this.Controls.Add(this.textBox_ServerName);
             this.Controls.Add(this.textBox_AlgorithmResults);
             this.Controls.Add(this.groupBox_SimplePredicates);
             this.Controls.Add(this.groupBox_AttributeInput);
@@ -335,7 +367,8 @@
             this.Controls.Add(this.dataGridView_ExecutionStages);
             this.Controls.Add(this.button_Import);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.ShowIcon = false;
+            this.Text = "PRIMARY HORIZONTAL FRAGMENTATION SOFTWARE";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ExecutionStages)).EndInit();
             this.groupBox_AttributeInput.ResumeLayout(false);
@@ -374,5 +407,8 @@
         private System.Windows.Forms.Label label_Operator;
         private System.Windows.Forms.Label label_Attribute;
         private System.Windows.Forms.TextBox textBox_AlgorithmResults;
+        private System.Windows.Forms.TextBox textBox_ServerName;
+        private System.Windows.Forms.Label label_ServerName;
+        private System.Windows.Forms.Button button_Connect;
     }
 }

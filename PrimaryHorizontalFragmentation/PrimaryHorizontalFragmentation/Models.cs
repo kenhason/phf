@@ -32,27 +32,32 @@ namespace PrimaryHorizontalFragmentation
 
         public struct predicate
         {
-            public string attributeName;
+            public attribute attribute;
             public string comparisonOperator;
             public string value;
 
-            public predicate(string _attributeName, string _comparisonOperator, string _value)
+            public predicate(attribute _attribute, string _comparisonOperator, string _value)
             {
-                attributeName = _attributeName;
+                attribute = _attribute;
                 comparisonOperator = _comparisonOperator;
                 value = _value;
             }
 
             public override string ToString()
             {
-                return this.attributeName + ' ' + this.comparisonOperator + ' ' + this.value;
+                string _value = "";
+                if (this.attribute.datatype == "string")
+                    _value = "'" + this.value + "'";
+                else
+                    _value = this.value;
+                return this.attribute.name + ' ' + this.comparisonOperator + ' ' + _value;
             }
 
             public override bool Equals(Object obj)
             {
                 predicate other = (predicate)obj;
                 return 
-                    (this.attributeName == other.attributeName) &&
+                    (this.attribute.Equals(other.attribute)) &&
                     (this.comparisonOperator == other.comparisonOperator) &&
                     (this.value == other.value);
             }

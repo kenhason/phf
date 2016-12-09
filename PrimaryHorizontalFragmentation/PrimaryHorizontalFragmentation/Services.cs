@@ -124,7 +124,7 @@ namespace PrimaryHorizontalFragmentation
             {
                 for (int j = i + 1; j < predicates.Count; j++)
                 {
-                    if (predicates[i].attributeName == predicates[j].attributeName)
+                    if (predicates[i].attribute.name == predicates[j].attribute.name)
                         return true;
                 }
             }
@@ -155,7 +155,7 @@ namespace PrimaryHorizontalFragmentation
             List<Models.attribute> attributeNames = new List<Models.attribute>();
             foreach (Models.predicate predicate in pr_prime)
             {
-                attributeNames.Add(new Models.attribute(predicate.attributeName, "", true));
+                attributeNames.Add(new Models.attribute(predicate.attribute.name, "", true));
             }
             return attributeNames;
         }
@@ -193,7 +193,7 @@ namespace PrimaryHorizontalFragmentation
                     //complement comparison operator
                     Models.predicate predicate = predicateGroup.predicates.First();
                     string complementOperator = getNegativeOperator(predicate.comparisonOperator);
-                    Models.predicate complementPredicate = new Models.predicate(predicate.attributeName, complementOperator, predicate.value);
+                    Models.predicate complementPredicate = new Models.predicate(predicate.attribute, complementOperator, predicate.value);
                     predicateGroup.predicates.Add(complementPredicate);
                 }
             }
@@ -232,8 +232,8 @@ namespace PrimaryHorizontalFragmentation
             }
             foreach (Models.predicate predicate in pr)
             {
-                if (isRelevant(predicate.attributeName, relation))
-                    predicateGroups.Find(group => group.groupName.Equals(predicate.attributeName)).addPredicate(predicate);
+                if (isRelevant(predicate.attribute.name, relation))
+                    predicateGroups.Find(group => group.groupName.Equals(predicate.attribute.name)).addPredicate(predicate);
             }
 
             return predicateGroups;
